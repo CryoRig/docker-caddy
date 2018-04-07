@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine
 LABEL maintainer "Carl Mercier <foss@carlmercier.com>"
 LABEL caddy_version="0.10.12" architecture="amd64"
 

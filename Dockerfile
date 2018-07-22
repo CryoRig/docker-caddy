@@ -5,7 +5,7 @@ LABEL caddy_version="0.11.0" architecture="amd64"
 ARG plugins=http.cache,http.cors,http.jwt,http.locale,http.login,http.nobots,http.proxyprotocol,http.realip,http.reauth,http.upload
 ARG dns=tls.dns.dyn
 
-RUN apk add --no-cache git tar curl ca-certificates bash && update-ca-certificates
+RUN apk add --no-cache tar curl ca-certificates bash && update-ca-certificates
 
 RUN curl --silent https://getcaddy.com | /bin/bash -s personal $plugins,$dns
 

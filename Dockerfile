@@ -1,9 +1,9 @@
 FROM alpine
-LABEL maintainer "Carl Mercier <foss@carlmercier.com>"
-LABEL caddy_version="0.10.12" architecture="amd64"
+LABEL maintainer "LuxAeterna"
+LABEL caddy_version="0.11.0" architecture="amd64"
 
-ARG plugins=dyndns,http.authz,http.cache,http.cgi,http.cors,http.expires,http.filemanager,http.filter,http.forwardproxy,http.git,http.hugo,http.ipfilter,http.jekyll,http.jwt,http.locale,http.login,http.nobots,http.proxyprotocol,http.ratelimit,http.realip,http.reauth,http.upload
-ARG dns=tls.dns.cloudflare,tls.dns.namecheap,tls.dns.rfc2136
+ARG plugins=http.cache,http.cors,http.jwt,http.locale,http.login,http.nobots,http.proxyprotocol,http.realip,http.reauth,http.upload
+ARG dns=tls.dns.duckdns
 
 RUN apk add --no-cache git tar curl ca-certificates bash && update-ca-certificates
 

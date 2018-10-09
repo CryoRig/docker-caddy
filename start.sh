@@ -1,5 +1,5 @@
 #!/bin/sh
-default="--conf /caddy/Caddyfile --log stdout -agree -disabled-metrics"
+default="--conf /caddy/Caddyfile --log stdout -agree"
 args=${RUN_ARGS:-$default}
 
 if [ ! -f /caddy/Caddyfile ]; then

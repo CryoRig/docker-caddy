@@ -1,6 +1,6 @@
 FROM alpine
 LABEL maintainer "LuxAeterna"
-LABEL caddy_version="0.11.1" architecture="amd64"
+LABEL caddy_version="0.11.2" architecture="amd64"
 
 ARG plugins=http.cache,http.realip
 #ARG dns=tls.dns.dyn

@@ -2,7 +2,7 @@ FROM alpine
 LABEL maintainer "LuxAeterna"
 LABEL caddy_version="0.11.3" architecture="amd64"
 
-ARG plugins=http.cache,http.realip,http.nobots
+ARG plugins=http.cache,http.realip,http.nobots,http.minify
 #ARG dns=tls.dns.dyn
 
 RUN apk add --no-cache tar curl ca-certificates bash && update-ca-certificates

@@ -2,7 +2,7 @@ FROM alpine:3.9
 LABEL maintainer "LuxAeterna"
 
 ENV CADDYPATH=/caddy/.caddy RUN_ARGS=
-ARG plugins=http.cache,http.realip,http.nobots,http.minify
+ARG plugins=http.cache,http.realip,http.nobots,http.minify,http.cgi
 #ARG dns=tls.dns.dyn
 EXPOSE 80 443 2015
 VOLUME /var/www /caddy

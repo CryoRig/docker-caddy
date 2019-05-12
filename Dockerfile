@@ -8,10 +8,9 @@ EXPOSE 80 443 2015
 VOLUME /var/www /caddy
 WORKDIR /caddy
 ENTRYPOINT ["/start.sh"]
-
-RUN apk add --no-cache tar curl ca-certificates bash && update-ca-certificates && mkdir -p /opt/assets
 COPY Caddyfile /caddy/
 COPY index.html /var/www/
 COPY Caddyfile index.html /opt/assets/
 COPY start.sh /
+RUN apk add --no-cache tar curl ca-certificates bash && update-ca-certificates && mkdir -p /opt/assets
 RUN curl --silent https://getcaddy.com | /bin/bash -s personal $plugins #,$dns

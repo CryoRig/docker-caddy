@@ -1,3 +1,6 @@
+# Deprecated, use Caddy V2
+https://github.com/caddyserver/caddy
+
 # Caddy Web Server
 
 A [Docker](http://docker.com) image for [Caddy](http://caddyserver.com).  
